@@ -2,3 +2,13 @@ Exploratory Data Analysis (EDA)
 Univariate Analysis
 Univariate analysis focuses on examining the distribution and characteristics of individual variables in the dataset.
 This analysis provides insights into the distribution, central tendency, and variability of each feature.
+
+#Summary statistics
+df.describe(include='all')
+
+#Distribution of Cancer Types
+plt.figure(figsize=(12, 6))
+sns.countplot(data=df, x='Cancer Type', palette='viridis')
+plt.xticks(rotation=90)
+plt.title('Distribution of Cancer Types')
+plt.show()
