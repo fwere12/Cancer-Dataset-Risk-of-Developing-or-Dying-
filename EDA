@@ -12,3 +12,14 @@ sns.countplot(data=df, x='Cancer Type', palette='viridis')
 plt.xticks(rotation=90)
 plt.title('Distribution of Cancer Types')
 plt.show()
+
+#Distribution of Male and Female Risk Development Percentages
+fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+
+sns.histplot(df['Male Risk Development Percentage'], kde=True, color='blue', ax=axes[0])
+axes[0].set_title('Distribution of Male Risk Development Percentage')
+
+sns.histplot(df['Female Risk Development Percentage'], kde=True, color='red', ax=axes[1])
+axes[1].set_title('Distribution of Female Risk Development Percentage')
+
+plt.show()
