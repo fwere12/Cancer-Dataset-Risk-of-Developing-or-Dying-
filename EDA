@@ -35,3 +35,8 @@ plt.figure(figsize=(10, 6))
 sns.scatterplot(data=df, x='Male Risk Dying Percentage', y='Female Risk Dying Percentage', hue='Cancer Type')
 plt.title('Male vs. Female Risk Dying Percentages')
 plt.show()
+
+#Multivariate Analysis
+sns.pairplot(df[['Male Risk Development Percentage', 'Female Risk Development Percentage',
+'Male Risk Dying Percentage', 'Female Risk Dying Percentage']], hue='Cancer Type', palette='viridis')
+plt.show()
