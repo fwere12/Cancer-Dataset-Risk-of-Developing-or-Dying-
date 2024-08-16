@@ -23,3 +23,9 @@ sns.histplot(df['Female Risk Development Percentage'], kde=True, color='red', ax
 axes[1].set_title('Distribution of Female Risk Development Percentage')
 
 plt.show()
+
+#Relationship between Male and Female Risk Development Percentages
+plt.figure(figsize=(10, 6))
+sns.scatterplot(data=df, x='Male Risk Development Percentage', y='Female Risk Development Percentage', hue='Cancer Type')
+plt.title('Male vs. Female Risk Development Percentages')
+plt.show()
